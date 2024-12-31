@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - Dotnet123
+name: Build and deploy ASP.Net Core app to Azure Web App - dotnet123
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_966FF326F18245CCA09FFDEC780CC44C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_7971D7A273724CD58D2BFC3523A63017 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E97C2E9DF3CB49E3BF2728940911EE32 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5BB89FA95D9742198E70056242239BBB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C2C4C983B7884789AD257E57C058BA56 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_53FF841CE4DA42AEB6940AB33A953275 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Dotnet123'
+          app-name: 'dotnet123'
           slot-name: 'Production'
           package: .
           
